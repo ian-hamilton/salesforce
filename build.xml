@@ -1,0 +1,20 @@
+<project name="Sample usage of Salesforce Ant tasks" default="test" basedir="." xmlns:sf="antlib:com.salesforce">
+
+    <property file="build.properties"/>
+    <property environment="env"/>
+
+	
+	<target name="retrieve">
+		<mkdir dir="retrieveMetadata"/>
+		<sf:retrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" 
+			retrieveTarget="retrieveMetadata" unpackaged="retrieveSource/package.xml"/>
+	</target>
+	
+  
+  	<target name="deploy">
+		<mkdir dir="retrieveMetadata"/>
+		<sf:retrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" 
+			retrieveTarget="retrieveMetadata" unpackaged="retrieveSource/package.xml"/>
+	</target>
+	
+</project>
