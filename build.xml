@@ -6,15 +6,14 @@
 	
 	<target name="retrieve">
 		<mkdir dir="retrieveMetadata"/>
-		<sf:retrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" 
+		<sf:retrieve username="${sf.retrieve.username}" password="${sf.retrieve.password}" serverurl="${sf.retrieve.serverurl}" maxPoll="${sf.retrieve.maxPoll}" 
 			retrieveTarget="retrieveMetadata" unpackaged="retrieveSource/package.xml"/>
 	</target>
 	
   
   	<target name="deploy">
-		<mkdir dir="retrieveMetadata"/>
-		<sf:retrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" 
-			retrieveTarget="retrieveMetadata" unpackaged="retrieveSource/package.xml"/>
+		<sf:deploy username="${sf.deploy.username}" password="${sf.deploy.password}" serverurl="${sf.deploy.serverurl}" maxPoll="${sf.deploy.maxPoll}" 
+			deployRoot="retrieveMetadata" />
 	</target>
 	
 </project>
