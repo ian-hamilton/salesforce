@@ -4,6 +4,10 @@
         <apexClass>InvoiceUtilities</apexClass>
         <enabled>false</enabled>
     </classAccesses>
+    <classAccesses>
+        <apexClass>TestDeleteRestrictInvoice</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
     <fieldPermissions>
         <editable>false</editable>
         <field>Invoice__c.Invoice_Total__c</field>
