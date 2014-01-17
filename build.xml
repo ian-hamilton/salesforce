@@ -6,7 +6,7 @@
 	<target name="test">
 		<mkdir dir="retrieveMetadata"/>
 		<sf:deploy username="${sf.retrieve.username}" password="${sf.retrieve.password}" serverurl="${sf.retrieve.serverurl}" maxPoll="${sf.retrieve.maxPoll}" 
-			deployRoot="retrieveMetadata" runAllTests="true"/>
+			deployRoot="retrieveMetadata" runAllTests="true" purgeondelete="true"/>
 	</target>
 	
 	<target name="retrieve">
